@@ -109,8 +109,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-reqirement-export/
-requirement-export/
+requirements-export/
 
 # Spyder project settings
 .spyderproject
