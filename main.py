@@ -91,7 +91,7 @@ async def dev(ctx):
         1. Functional API: Branch the main repo and implmentation it. After 
         finished, you can direct to merge your repo. to "main branch".
     """
-    await ctx.send('{message}')
+    await ctx.send(f'{message}')
 
 
 @cool.command(name='bot')
