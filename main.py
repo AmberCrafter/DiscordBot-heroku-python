@@ -72,6 +72,28 @@ async def cool(ctx):
     if ctx.invoked_subcommand is None:
         await ctx.send('No, {0.subcommand_passed} is not cool'.format(ctx))
 
+@bot.command()
+async def dev(ctx):
+    """show devalop information"""
+    message = """
+        ========================================================================
+        IMPORTANT!: Heroku will auto CD "main" branch, due to CI not online. You
+        will ensure your repo is work fine and then merge it, otherwise this app
+        will fail and offline.
+
+        If you want to join and devalop this bot, please send me your github 
+        username and email. I'll invite you as soon as posible!
+
+        github repo.: https://github.com/AmberCrafter/DiscordBot-heroku-python
+        ========================================================================
+
+        Development rules:
+        1. Functional API: Branch the main repo and implmentation it. After 
+        finished, you can direct to merge your repo. to "main branch".
+    """
+    await ctx.send('{message}')
+
+
 @cool.command(name='bot')
 async def _bot(ctx):
     """Is the bot cool?"""
