@@ -15,7 +15,7 @@ description = '''Development assistant!'''
 intents = discord.Intents.default()
 intents.members = True
 
-bot = commands.Bot(command_prefix='!', description=description, intents=intents)
+bot = commands.Bot(command_prefix='?', description=description, intents=intents)
 
 @bot.command()
 async def load(ctx, extension):

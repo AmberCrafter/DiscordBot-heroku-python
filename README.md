@@ -9,9 +9,11 @@
 3. append event
     - on_member_join
     - on_member_remove
+    - on_message: notify the author!
 4. append command
     - ping: response bot latency
 5. cog style
+
 
 
 [2022-07-11]

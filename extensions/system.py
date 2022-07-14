@@ -2,6 +2,7 @@ from extensions.classer import Ext_Cog
 import discord
 from discord.ext import commands
 import datetime
+import os
 
 class Bot_system(Ext_Cog):
     @commands.Cog.listener()
@@ -27,14 +28,28 @@ class Bot_system(Ext_Cog):
 
     @commands.Cog.listener()
     async def on_member_join(self,member):
-        channel = self.bot.get_channel(996996812269420714)
-        await channel.send(f'[{(datetime.datetime.now()+datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")}] Hello, {member}!')
+        """
+        notify someone join the guild
+        GATE_CHANNEL_ID: set to the notify destination
+        """
+        try:
+            channel = self.bot.get_channel(os.getenv("GATE_CHANNEL_ID"))
+            await channel.send(f'[{(datetime.datetime.now()+datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")}] Hello, {member}!')
+        except:
+            print("Invalid channel id!")
 
     @commands.Cog.listener()
     async def on_member_remove(self,member):
-        channel = self.bot.get_channel(996996812269420714)
-        await channel.send(f'[{(datetime.datetime.now()+datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")}] Goodbye, {member}!')
-
+        """
+        notify someone leave the guild
+        GATE_CHANNEL_ID: set to the notify destination
+        """
+        try:
+            channel = self.bot.get_channel(os.getenv("GATE_CHANNEL_ID"))
+            await channel.send(f'[{(datetime.datetime.now()+datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")}] Goodbye, {member}!')
+        except:
+            print("Invalid channel id!")
+            
     @commands.command()
     async def dev(self,ctx):
         """show devalopment information"""

@@ -12,6 +12,8 @@ import discord
 from discord.ext import commands
 class CLASSNAME(Ext_Cog):
     ...
+def setup(bot):
+    bot.add_cog(CLASSNAME(bot))
 """
 import discord
 from discord.ext import commands
