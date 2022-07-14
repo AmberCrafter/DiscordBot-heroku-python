@@ -2,6 +2,10 @@
 
 ---
 ## Functional: Quest 
+#### ChangeLog
+[2022-07-11]
+1. steup basic structure of the quest system
+
 
 Features:
 1. add quest
@@ -21,11 +25,12 @@ This is a status table, record status enum. Including header
     status
 ]
 and value
-  1 => Unpublish
-  2 => Publish
-  3 => Undertake
-  4 => Finished
-  5 => Timeout
+  1 => UNPUBLISH
+  2 => PUBLISH
+  3 => UNDERTAKE
+  4 => FINISHED
+  5 => FAILED
+  6 => TIMEOUT
  
 2. quest
 This is a quest history table, which record all of the quests information. The header including
