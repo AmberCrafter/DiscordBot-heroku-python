@@ -1,3 +1,4 @@
+from builtins import print
 from dotenv import load_dotenv
 import os
 import datetime
@@ -8,7 +9,6 @@ TOKEN = os.getenv("BOT_TOKEN")
 
 import discord
 from discord.ext import commands
-import random
 
 description = '''Development assistant!'''
 
@@ -17,53 +17,36 @@ intents.members = True
 
 bot = commands.Bot(command_prefix='!', description=description, intents=intents)
 
-@bot.event
-async def on_ready():
-    print('Logged in as')
-    print(bot.user.name)
-    print(bot.user.id)
-    print('Dev assistant wakeup!')
-    print('------')
+@bot.command()
+async def load(ctx, extension):
+    """load extensions"""
+    bot.load_extension(f"extensions.{extension}")
+    await ctx.send(f"Loaded {extension} successful.")
 
 @bot.command()
-async def echo(ctx, message: str):
-    """echo message"""
-    await ctx.send(f"{message}")
+async def unload(ctx, extension):
+    """unload extensions"""
+    bot.unload_extension(f"extensions.{extension}")
+    await ctx.send(f"Unloaded {extension} successful.")
 
 @bot.command()
-async def ping(ctx, *args):
-    """echo bot latency"""
-    await ctx.send(f"ping: {int(bot.latency*1000)}ms")
+async def reload(ctx, extension):
+    """reload extensions"""
+    bot.reload_extension(f"extensions.{extension}")
+    await ctx.send(f"Reloaded {extension} successful.")
 
-@bot.event
-async def on_member_join(member):
-    channel = bot.get_channel(996996812269420714)
-    await channel.send(f'[{(datetime.datetime.now()+datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")}] Hello, {member}!')
+# init module
+folderpath = './extensions'
+for filename in os.listdir(folderpath):
+    if not filename.endswith('.py'): continue
+    if filename in ['classer.py']: continue
+    # load_extansion path format: {folder}.{file}
+    #   which 
+    #   root path is same as main.py location
+    #   folder and file seperate with "."
+    #   file didn't need suffix
+    bot.load_extension(f"{folderpath[2:]}.{filename[:-3]}")
 
-@bot.event
-async def on_member_remove(member):
-    channel = bot.get_channel(996996812269420714)
-    await channel.send(f'[{(datetime.datetime.now()+datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")}] Goodbye, {member}!')
 
-@bot.command()
-async def dev(ctx):
-    """show devalop information"""
-    message = """
-========================================================================
-IMPORTANT!: Heroku will auto CD "main" branch, due to CI not online. You
-will ensure your repo is work fine and then merge it, otherwise this app
-will fail and offline.
-
-If you want to join and devalop this bot, please send me your github 
-username and email. I'll invite you as soon as posible!
-
-github repo.: https://github.com/AmberCrafter/DiscordBot-heroku-python
-========================================================================
-
-Development rules:
-1. Functional API: Branch the main repo and implmentation it. After 
-finished, you can direct to merge your repo. to "main branch".
-    """
-    await ctx.send(f'{message}')
-
-bot.run(TOKEN)
+if __name__=="__main__":
+    bot.run(TOKEN)

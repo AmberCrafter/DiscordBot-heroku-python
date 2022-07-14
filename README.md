@@ -3,6 +3,17 @@
 ---
 ## Functional: Quest 
 #### ChangeLog
+[2022-07-14]
+1. Enable all bot Intents
+2. Clean exmaple code
+3. append event
+    - on_member_join
+    - on_member_remove
+4. append command
+    - ping: response bot latency
+5. cog style
+
+
 [2022-07-11]
 1. steup basic structure of the quest system
 
