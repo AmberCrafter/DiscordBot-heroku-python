@@ -1,6 +1,5 @@
 from enum import Enum
 import sqlite3
-from typing_extensions import Self
 from dotenv import load_dotenv
 import os
 from datetime import datetime
@@ -27,7 +26,7 @@ class Database:
     Recommand to use the firebase.
     '''
 
-    def __init__(self) -> Self:
+    def __init__(self):
         database_path = os.getenv("QUEST_DATABASE")
         self.db = sqlite3.connect(database_path)
         self.cur = self.db.cursor()
@@ -98,12 +97,32 @@ class Database:
         """
 
         try:
-            query = f"create table if not exists quest ({table_information});"
+            query = f"create table if not exists detail ({table_information});"
             self.exe(query)
         except Exception as err:
             print(err)
             return False
         return True
+
+    def _add_detail(self, context: str) -> int:
+        '''
+        insert a new detail and return id
+
+        if process failed, return -1
+        '''
+        query = 'Insert into detail (context) values ("{context}");'
+        
+        try:
+            self.exe(query.format(
+                context = context
+            ))
+            self.db.commit()
+            self.exe("select id from detail order by id desc limit 1;")
+            return self.fa()[0][0]
+        except Exception as err:
+            print(err)
+            return -1
+
 
     def add(self, title: str, announcer: str, reward: int = 0, detail: str = "", starttime: datetime = datetime.min, endtime: datetime = datetime.max) -> bool:
         '''
@@ -111,7 +130,11 @@ class Database:
         '''
         formation = "%Y-%m-%d %H:%M:%S"
 
-        query = f'Insert into quest (starttime, endtime, announcer, title, detail_id, reward, status_id) values ("{starttime.strftime(formation)}", "{endtime.strftime(formation)}", "{announcer}", "{title}", 0, {reward}, 2);'
+        detail_id = self._add_detail(detail)
+        if detail_id==-1:
+            return False
+
+        query = f'Insert into quest (starttime, endtime, announcer, title, detail_id, reward, status_id) values ("{starttime.strftime(formation)}", "{endtime.strftime(formation)}", "{announcer}", "{title}", {detail_id}, {reward}, 2);'
 
         try:
             self.exe(query)
@@ -126,10 +149,43 @@ class Database:
         get all quests from database
         '''
         query = 'select * from quest where status_id between 2 and 3;'
+        query_detail = 'select context from detail where id={index};'
 
         try:
             self.exe(query)
-            return list(self.fa())
+            # return list(self.fa())
+            res = []
+            for quest in list(self.fa()):
+                self.exe(query_detail.format(
+                    index = quest[5]
+                ))
+                context = self.fa()[0][0]
+                res.append(list(quest)+[context])
+            return res
+
+        except Exception as err:
+            print(err)
+            return []
+
+    def get(self, index: int) -> list:
+        '''
+        get quests from database by id
+        '''
+        query = f'select * from quest where status_id between 2 and 3 and id=={index};'
+        query_detail = 'select context from detail where id={detail_id};'
+
+        try:
+            self.exe(query)
+            # return list(self.fa())
+            res = []
+            for quest in list(self.fa()):
+                self.exe(query_detail.format(
+                    detail_id = quest[5]
+                ))
+                context = self.fa()[0][0]
+                res.append(list(quest)+[context])
+            return res
+
         except Exception as err:
             print(err)
             return []
@@ -163,6 +219,21 @@ class Database:
             return False
         return True
 
+    def update_taker(self, index: int, taker: str) -> bool:
+        '''
+        update quest undertaker by id
+        '''
+
+        query = f'update quest set undertaker="{taker}" where id={index};'
+
+        try:
+            self.exe(query)
+            self.db.commit()
+        except Exception as err:
+            print(err)
+            return False
+        return True
+
 
 class Quest:
     '''
@@ -184,7 +255,7 @@ class Quest:
         get the quest table
         '''
         quests = self.database.get_all()
-        pattern = "id: {index}\t{title}\nannouncer: {announcer}\nstatus: {status}\ntaker: {undertaker}\n{detail}\nreward: {reward}\n\n\n"
+        pattern = "id: {index}\t{title}\nannouncer: {announcer}\nstatus: {status}\ntaker: {undertaker}\n\n------------------------------\n{detail}\n\nreward: {reward}\n"
         res = []
 
         for q in quests:
@@ -195,20 +266,46 @@ class Quest:
                     announcer=q[3],
                     status=Status(int(q[7])).name,
                     undertaker=q[8],
-                    detail=q[5],
+                    detail=q[9],
                     reward=q[6]
                 )
             )
         return res
-        
+    
+    def book(self, quest_id: int, taker: str) -> bool:
+        '''
+        book the quest by id with taker name
+        '''
+        try:
+            self.database.update_taker(quest_id, taker)
+            self.database.update_status(quest_id, Status.UNDERTAKE)
+            return True
+        except Exception as err:
+            print(err)
+            return False
+
+    def complete(self,quest_id) -> bool:
+        '''
+        update the quest status to FINISHED by id
+        '''
+        try:
+            self.database.update_status(quest_id, Status.FINISHED)
+            return True
+        except Exception as err:
+            print(err)
+            return False
 
 
 if __name__=='__main__':
     # unit test
     QuestBoard = Quest()
     print(QuestBoard.list())
-    QuestBoard.add("tester", "new_quest", 100, "")
-    QuestBoard.add("tester", "new_quest2", 200, "")
+    QuestBoard.add("tester", "new_quest", 100, "hello")
+    QuestBoard.add("tester", "new_quest2", 200, "world")
+    QuestBoard.add("tester", "new_quest3", 12300, "asdasd")
+    QuestBoard.add("tester", "new_quest4", 1232130, "12323")
 
     for val in QuestBoard.list():
+        print("================================================")
         print(val)
+        print("================================================\n\n\n")
