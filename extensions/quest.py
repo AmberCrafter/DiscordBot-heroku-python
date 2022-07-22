@@ -308,6 +308,9 @@ from discord.ext import commands
 class Quest(Ext_Cog):
     @commands.group()
     async def quest(self, ctx):
+        '''
+        Quest commands.
+        '''
         self.QuestBoard = _Quest()
         pass
 
