@@ -8,7 +8,8 @@
     - insert detail id <--> detail context
     - book the quest
     - complete the quest
-
+    - list the quests
+2. merge the quest module to release version
 
 [2022-07-14]
 1. Enable all bot Intents
