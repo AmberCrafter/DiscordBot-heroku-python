@@ -3,6 +3,14 @@
 ---
 ## Functional: Quest 
 #### ChangeLog
+[2022-07-22]
+1. update quest funcions
+    - insert detail id <--> detail context
+    - book the quest
+    - complete the quest
+    - list the quests
+2. merge the quest module to release version
+
 [2022-07-14]
 1. Enable all bot Intents
 2. Clean exmaple code
