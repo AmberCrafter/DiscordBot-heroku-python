@@ -1,5 +1,8 @@
+# Version: 0.1.0
+
 from enum import Enum
 import sqlite3
+from typing import Optional
 from dotenv import load_dotenv
 import os
 from datetime import datetime
@@ -171,7 +174,7 @@ class _Database:
         '''
         get quests from database by id
         '''
-        query = f'select * from quest where status_id between 2 and 3 and id=={index};'
+        query = f'select * from quest where id=={index};'
         query_detail = 'select context from detail where id={detail_id};'
 
         try:
@@ -250,11 +253,14 @@ class _Quest:
             title, announcer, reward, detail
         )
 
-    def list(self) -> list:
+    def list(self, is_all: bool=False, index: Optional[int] = None) -> list:
         '''
         get the quest table
         '''
-        quests = self.database.get_all()
+        if is_all or isinstance(index, type(None)):
+            quests = self.database.get_all()
+        else:
+            quests = self.database.get(index)
         pattern = "id: {index}\t{title}\nannouncer: {announcer}\nstatus: {status}\ntaker: {undertaker}\n\n------------------------------\n{detail}\n\nreward: {reward}\n"
         res = []
 
@@ -306,16 +312,23 @@ class Quest(Ext_Cog):
         pass
 
     @quest.command()
-    async def list_all(self,ctx):
+    async def list(self,ctx,index=None):
         """
-        list all quests
+        [index: int]. List quests (default: all)
         """
-        for val in self.QuestBoard.list():
+        if isinstance(index, type(None)):
+            quests = self.QuestBoard.list(is_all=True)
+        else:
+            quests = self.QuestBoard.list(index=int(index))
+        for val in quests:
             context = "================================================\n{info}\n================================================\n\n\n"
             await ctx.send(context.format(info = val))
 
     @quest.command()
     async def add(self, ctx, title: str, reward: int=0, detail: str=None):
+        """
+        (title: str) [reward: int] [detail: str] Publish a new quest
+        """
         # anncouncer name need to change into id and mapping to correct name
         announcer = ctx.author.name
         try:
@@ -326,6 +339,9 @@ class Quest(Ext_Cog):
 
     @quest.command()
     async def book(self, ctx, index:int):
+        """
+        (index: int) Book the quest by quest id.
+        """
         # anncouncer name need to change into id and mapping to correct name
         announcer = ctx.author.name
         try:
@@ -336,14 +352,20 @@ class Quest(Ext_Cog):
 
     @quest.command()
     async def complete(self, ctx, index:int):
+        """
+        (index: int) Update the quest status to completed.
+        """
         # anncouncer name need to change into id and mapping to correct name
         announcer = ctx.author.name
-        try:
-            self.QuestBoard.complete(index)
-            await ctx.send("Compelete the quest!")
-        except Exception as err:
-            await ctx.send(f"Rejected your request due to error happened: {err}")
-
+        quest = self.QuestBoard.database.get(index=index)
+        if quest[0][3]==announcer:
+            try:
+                self.QuestBoard.complete(index)
+                await ctx.send("Compelete the quest!")
+            except Exception as err:
+                await ctx.send(f"Rejected your request due to error happened: {err}")
+        else:
+            await ctx.send("Permission deny. You're not the quest owner!")
 
 def setup(bot):
     bot.add_cog(Quest(bot))
@@ -352,7 +374,7 @@ def setup(bot):
 
 if __name__=='__main__':
     # unit test
-    QuestBoard = Quest()
+    QuestBoard = _Quest()
     print(QuestBoard.list())
     QuestBoard.add("tester", "new_quest", 100, "hello")
     QuestBoard.add("tester", "new_quest2", 200, "world")
