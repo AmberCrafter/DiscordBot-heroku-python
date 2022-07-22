@@ -7,7 +7,7 @@ from datetime import datetime
 
 load_dotenv()
 
-class Status(Enum):
+class _Status(Enum):
     '''
     Quest status enumerate!
     '''
@@ -18,7 +18,7 @@ class Status(Enum):
     FAILED = 5
     TIMEOUT = 6
 
-class Database:
+class _Database:
     '''
     In release product, database need to change into other PaaS,
     which will advoid missing the data when rebuild the product.
@@ -205,11 +205,11 @@ class Database:
             print(err)
             return []
 
-    def update_status(self, index: int, status: Status) -> bool:
+    def update_status(self, index: int, status: _Status) -> bool:
         '''
         update quest status by id
         '''
-        query = f'update quest set status={status.value} where id={index};'
+        query = f'update quest set status_id={status.value} where id={index};'
 
         try:
             self.exe(query)
@@ -235,12 +235,12 @@ class Database:
         return True
 
 
-class Quest:
+class _Quest:
     '''
     This is the Quest implementation.
     '''
     def __init__(self) -> None:
-        self.database = Database()
+        self.database = _Database()
 
     def add(self, announcer: str, title: str, reward: int, detail: str="") -> bool:
         '''
@@ -264,7 +264,7 @@ class Quest:
                     index=q[0],
                     title=q[4],
                     announcer=q[3],
-                    status=Status(int(q[7])).name,
+                    status=_Status(int(q[7])).name,
                     undertaker=q[8],
                     detail=q[9],
                     reward=q[6]
@@ -278,7 +278,7 @@ class Quest:
         '''
         try:
             self.database.update_taker(quest_id, taker)
-            self.database.update_status(quest_id, Status.UNDERTAKE)
+            self.database.update_status(quest_id, _Status.UNDERTAKE)
             return True
         except Exception as err:
             print(err)
@@ -289,11 +289,65 @@ class Quest:
         update the quest status to FINISHED by id
         '''
         try:
-            self.database.update_status(quest_id, Status.FINISHED)
+            self.database.update_status(quest_id, _Status.FINISHED)
             return True
         except Exception as err:
             print(err)
             return False
+
+
+from extensions.classer import Ext_Cog
+import discord
+from discord.ext import commands
+class Quest(Ext_Cog):
+    @commands.group()
+    async def quest(self, ctx):
+        self.QuestBoard = _Quest()
+        pass
+
+    @quest.command()
+    async def list_all(self,ctx):
+        """
+        list all quests
+        """
+        for val in self.QuestBoard.list():
+            context = "================================================\n{info}\n================================================\n\n\n"
+            await ctx.send(context.format(info = val))
+
+    @quest.command()
+    async def add(self, ctx, title: str, reward: int=0, detail: str=None):
+        # anncouncer name need to change into id and mapping to correct name
+        announcer = ctx.author.name
+        try:
+            self.QuestBoard.add(announcer, title, int(reward), detail)
+            await ctx.send("Accepted your new quest!")
+        except Exception as err:
+            await ctx.send(f"Rejected your request due to error happened: {err}")
+
+    @quest.command()
+    async def book(self, ctx, index:int):
+        # anncouncer name need to change into id and mapping to correct name
+        announcer = ctx.author.name
+        try:
+            self.QuestBoard.book(index, announcer)
+            await ctx.send("Accepted your booking!")
+        except Exception as err:
+            await ctx.send(f"Rejected your request due to error happened: {err}")
+
+    @quest.command()
+    async def complete(self, ctx, index:int):
+        # anncouncer name need to change into id and mapping to correct name
+        announcer = ctx.author.name
+        try:
+            self.QuestBoard.complete(index)
+            await ctx.send("Compelete the quest!")
+        except Exception as err:
+            await ctx.send(f"Rejected your request due to error happened: {err}")
+
+
+def setup(bot):
+    bot.add_cog(Quest(bot))
+
 
 
 if __name__=='__main__':
