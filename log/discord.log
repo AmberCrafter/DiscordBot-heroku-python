@@ -1,0 +1,1671 @@
+[2022-07-25 16:50:01] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-25 16:50:01] [INFO    ] discord.client: logging in using static token
+[2022-07-25 16:50:33] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-25 16:50:33] [INFO    ] discord.client: logging in using static token
+[2022-07-25 16:51:50] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-25 16:51:50] [INFO    ] discord.client: logging in using static token
+[2022-07-25 16:53:01] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-25 16:53:01] [INFO    ] discord.client: logging in using static token
+[2022-07-25 16:53:02] [INFO    ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
+[2022-07-25 16:53:03] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 5c6988e599965a9c090e146b48fecffb).
+[2022-07-25 16:54:11] [ERROR   ] discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "ask" is not found
+[2022-07-25 16:55:12] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-25 16:55:12] [INFO    ] discord.client: logging in using static token
+[2022-07-25 16:56:09] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-25 16:56:09] [INFO    ] discord.client: logging in using static token
+[2022-07-25 16:56:09] [INFO    ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
+[2022-07-25 16:56:10] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 14329dd10390fde84ae26c8844442d6f).
+[2022-07-25 17:26:06] [INFO    ] discord.client: Got a request to RESUME the websocket.
+[2022-07-25 17:26:07] [INFO    ] discord.gateway: Shard ID None has sent the RESUME payload.
+[2022-07-25 17:26:07] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 14329dd10390fde84ae26c8844442d6f.
+[2022-07-25 17:33:44] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-25 17:33:44] [INFO    ] discord.client: logging in using static token
+[2022-07-25 17:33:45] [INFO    ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
+[2022-07-25 17:33:45] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: e6927cbc4442b277a06555cc113f584d).
+[2022-07-25 17:56:39] [INFO    ] discord.client: Got a request to RESUME the websocket.
+[2022-07-25 17:56:39] [INFO    ] discord.gateway: Shard ID None has sent the RESUME payload.
+[2022-07-25 17:56:40] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session e6927cbc4442b277a06555cc113f584d.
+[2022-07-26 15:05:30] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-26 15:05:30] [INFO    ] discord.client: logging in using static token
+[2022-07-26 15:05:31] [INFO    ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
+[2022-07-26 15:05:32] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: dbf2bfb61811835b0cdf7dbc2c4cab39).
+[2022-07-26 15:32:57] [INFO    ] discord.gateway: Websocket closed with 1006, attempting a reconnect.
+[2022-07-26 15:32:57] [INFO    ] discord.client: Got a request to RESUME the websocket.
+[2022-07-26 15:32:57] [INFO    ] discord.gateway: Shard ID None has sent the RESUME payload.
+[2022-07-26 15:32:57] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session dbf2bfb61811835b0cdf7dbc2c4cab39.
+[2022-07-26 15:38:55] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-26 15:38:55] [INFO    ] discord.client: logging in using static token
+[2022-07-26 15:38:56] [INFO    ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
+[2022-07-26 15:38:57] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 9c49e673421e0c0fdb39ce9b34b2315d).
+[2022-07-26 15:39:19] [ERROR   ] discord.ext.commands.bot: Ignoring exception in command quest ui
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 198, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 480, in ui
+    embed = wrap_qeust(quest)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 455, in wrap_qeust
+    title = "{title}".format(title=quest[4]),
+IndexError: list index out of range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1330, in invoke
+    await ctx.command.invoke(ctx)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 1612, in invoke
+    await ctx.invoked_subcommand.invoke(ctx)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 993, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 207, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: IndexError: list index out of range
+[2022-07-26 15:40:07] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-26 15:40:07] [INFO    ] discord.client: logging in using static token
+[2022-07-26 15:40:08] [INFO    ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
+[2022-07-26 15:40:08] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 02cb64da62a9aeecad3b122c35fd0341).
+[2022-07-26 15:40:23] [ERROR   ] discord.ext.commands.bot: Ignoring exception in command quest ui
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 198, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 480, in ui
+    embed = wrap_qeust(quest)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 455, in wrap_qeust
+    title = "{title}".format(title=quest[4]),
+IndexError: list index out of range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1330, in invoke
+    await ctx.command.invoke(ctx)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 1612, in invoke
+    await ctx.invoked_subcommand.invoke(ctx)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 993, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 207, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: IndexError: list index out of range
+[2022-07-26 15:41:04] [ERROR   ] discord.ext.commands.bot: Ignoring exception in command quest ui
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 198, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 480, in ui
+    embed = wrap_qeust(quest)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 455, in wrap_qeust
+    title = "{title}".format(title=quest[4]),
+IndexError: list index out of range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1330, in invoke
+    await ctx.command.invoke(ctx)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 1612, in invoke
+    await ctx.invoked_subcommand.invoke(ctx)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 993, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 207, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: IndexError: list index out of range
+[2022-07-26 15:42:41] [ERROR   ] discord.ext.commands.bot: Ignoring exception in command quest ui
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 198, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 480, in ui
+    embed = wrap_qeust(quest)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 455, in wrap_qeust
+    title = "{title}".format(title=quest[4]),
+IndexError: list index out of range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1330, in invoke
+    await ctx.command.invoke(ctx)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 1612, in invoke
+    await ctx.invoked_subcommand.invoke(ctx)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 993, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 207, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: IndexError: list index out of range
+[2022-07-26 15:43:02] [ERROR   ] discord.ext.commands.bot: Ignoring exception in command quest ui
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 198, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 480, in ui
+    embed = wrap_qeust(quest)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 455, in wrap_qeust
+    title = "{title}".format(title=quest[4]),
+IndexError: list index out of range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1330, in invoke
+    await ctx.command.invoke(ctx)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 1612, in invoke
+    await ctx.invoked_subcommand.invoke(ctx)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 993, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 207, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: IndexError: list index out of range
+[2022-07-26 15:44:24] [ERROR   ] discord.ext.commands.bot: Ignoring exception in command quest ui
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 198, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 481, in ui
+    embed = wrap_qeust(quest)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 455, in wrap_qeust
+    title = "{title}".format(title=quest[4]),
+IndexError: list index out of range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1330, in invoke
+    await ctx.command.invoke(ctx)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 1612, in invoke
+    await ctx.invoked_subcommand.invoke(ctx)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 993, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 207, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: IndexError: list index out of range
+[2022-07-26 15:47:47] [ERROR   ] discord.ui.view: Ignoring exception in view <QuestBoardUI timeout=180.0 children=2> for item <Button style=<ButtonStyle.success: 3> url=None disabled=False label='Next' emoji=None row=None>
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 386, in button_next
+    await interaction.response.is_done()
+TypeError: object bool can't be used in 'await' expression
+[2022-07-26 15:53:54] [ERROR   ] discord.ext.commands.bot: Ignoring exception in command reload
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 198, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 122, in reload
+    await bot.reload_extension(f"extensions.{extension}")
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1082, in reload_extension
+    raise errors.ExtensionNotLoaded(name)
+discord.ext.commands.errors.ExtensionNotLoaded: Extension 'extensions.ui' has not been loaded.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1330, in invoke
+    await ctx.command.invoke(ctx)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 993, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 207, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ExtensionNotLoaded: Extension 'extensions.ui' has not been loaded.
+[2022-07-26 15:55:14] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-26 15:55:14] [INFO    ] discord.client: logging in using static token
+[2022-07-26 15:55:15] [INFO    ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
+[2022-07-26 15:55:15] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 157e70b8b79df3f89def3ef448026687).
+[2022-07-26 15:55:33] [ERROR   ] discord.ext.commands.bot: Ignoring exception in command quest ui
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 198, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 503, in ui
+    embed = wrap_qeust(quest)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 459, in wrap_qeust
+    title = "{title}".format(title=quest[4]),
+IndexError: list index out of range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1330, in invoke
+    await ctx.command.invoke(ctx)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 1612, in invoke
+    await ctx.invoked_subcommand.invoke(ctx)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 993, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ext/commands/core.py", line 207, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: IndexError: list index out of range
+[2022-07-26 16:08:57] [ERROR   ] discord.ui.view: Ignoring exception in view <QuestBoardUI timeout=180.0 children=2> for item <Button style=<ButtonStyle.success: 3> url=None disabled=False label='Next' emoji=None row=None>
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 397, in button_next
+    embed = Quest.wrap_qeust(self.quest)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 404, in wrap_qeust
+    title = "{title}".format(title=quest[4]),
+IndexError: list index out of range
+[2022-07-26 16:09:00] [ERROR   ] discord.ui.view: Ignoring exception in view <QuestBoardUI timeout=180.0 children=2> for item <Button style=<ButtonStyle.success: 3> url=None disabled=False label='Prev' emoji=None row=None>
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 384, in button_prev
+    if self.quest[0]-1>0:
+TypeError: unsupported operand type(s) for -: 'list' and 'int'
+[2022-07-26 16:09:02] [ERROR   ] discord.ui.view: Ignoring exception in view <QuestBoardUI timeout=180.0 children=2> for item <Button style=<ButtonStyle.success: 3> url=None disabled=False label='Next' emoji=None row=None>
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 393, in button_next
+    index = self.quest[0]+1
+TypeError: can only concatenate list (not "int") to list
+[2022-07-26 16:09:15] [ERROR   ] discord.ui.view: Ignoring exception in view <QuestBoardUI timeout=180.0 children=2> for item <Button style=<ButtonStyle.success: 3> url=None disabled=False label='Next' emoji=None row=None>
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 393, in button_next
+    index = self.quest[0]+1
+TypeError: can only concatenate list (not "int") to list
+[2022-07-26 16:09:50] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-26 16:09:50] [INFO    ] discord.client: logging in using static token
+[2022-07-26 16:09:51] [INFO    ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
+[2022-07-26 16:09:51] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 1ef7a136c67f7fc6a4aadb5264e39c7f).
+[2022-07-26 16:10:06] [ERROR   ] discord.ui.view: Ignoring exception in view <QuestBoardUI timeout=180.0 children=2> for item <Button style=<ButtonStyle.success: 3> url=None disabled=False label='Next' emoji=None row=None>
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 399, in button_next
+    embed = Quest.wrap_qeust(self.quest)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 406, in wrap_qeust
+    title = "{title}".format(title=quest[4]),
+IndexError: list index out of range
+[2022-07-26 16:10:22] [ERROR   ] discord.ui.view: Ignoring exception in view <QuestBoardUI timeout=180.0 children=2> for item <Button style=<ButtonStyle.success: 3> url=None disabled=False label='Next' emoji=None row=None>
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 395, in button_next
+    index = self.quest[0]+1
+TypeError: can only concatenate list (not "int") to list
+[2022-07-26 16:11:16] [ERROR   ] discord.ui.view: Ignoring exception in view <QuestBoardUI timeout=180.0 children=2> for item <Button style=<ButtonStyle.success: 3> url=None disabled=False label='Next' emoji=None row=None>
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 395, in button_next
+    index = self.quest[0]+1
+TypeError: can only concatenate list (not "int") to list
+[2022-07-26 16:12:01] [ERROR   ] discord.ui.view: Ignoring exception in view <QuestBoardUI timeout=180.0 children=2> for item <Button style=<ButtonStyle.success: 3> url=None disabled=False label='Next' emoji=None row=None>
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 393, in button_next
+    await interaction.response.defer()
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/interactions.py", line 582, in defer
+    await adapter.create_interaction_response(
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+[2022-07-26 16:12:53] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-26 16:12:53] [INFO    ] discord.client: logging in using static token
+[2022-07-26 16:12:54] [INFO    ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
+[2022-07-26 16:12:54] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: cde3e3290c778deaf2c02d91372b0d72).
+[2022-07-26 16:13:17] [ERROR   ] discord.ui.view: Ignoring exception in view <QuestBoardUI timeout=180.0 children=2> for item <Button style=<ButtonStyle.success: 3> url=None disabled=False label='Next' emoji=None row=None>
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 396, in button_next
+    next = self.database.get(index)[0]
+IndexError: list index out of range
+[2022-07-26 16:16:30] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 383, in button_prev
+    await interaction.response.defer()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 951, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:16:37] [INFO    ] discord.gateway: Websocket closed with 1000, cannot reconnect.
+[2022-07-26 16:16:37] [ERROR   ] discord.client: Attempting a reconnect in 0.05s
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/client.py", line 680, in connect
+    await self.ws.poll_event()
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/gateway.py", line 631, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+[2022-07-26 16:16:37] [ERROR   ] discord.ui.view: Ignoring exception in view <QuestBoardUI timeout=180.0 children=2> for item <Button style=<ButtonStyle.success: 3> url=None disabled=False label='Prev' emoji=None row=None>
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 383, in button_prev
+    await interaction.response.defer()
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/interactions.py", line 582, in defer
+    await adapter.create_interaction_response(
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+[2022-07-26 16:16:38] [INFO    ] discord.gateway: Shard ID None has sent the RESUME payload.
+[2022-07-26 16:16:38] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session cde3e3290c778deaf2c02d91372b0d72.
+[2022-07-26 16:24:21] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 412, in button_take
+    except:
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:24:31] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 20 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 412, in button_take
+    except:
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:24:41] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 30 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 412, in button_take
+    except:
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:24:51] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 40 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 412, in button_take
+    except:
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:25:01] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 50 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 412, in button_take
+    except:
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:25:11] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 60 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 412, in button_take
+    except:
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:25:21] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 70 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 412, in button_take
+    except:
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:25:31] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 80 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 412, in button_take
+    except:
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:25:41] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 90 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 412, in button_take
+    except:
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:25:51] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 100 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 412, in button_take
+    except:
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:26:01] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 110 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 412, in button_take
+    except:
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:26:11] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 120 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 412, in button_take
+    await interaction.response.send_message("Taking the quest successfully!")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:26:21] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 130 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 412, in button_take
+    await interaction.response.send_message("Taking the quest successfully!")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:26:31] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 140 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 412, in button_take
+    await interaction.response.send_message("Taking the quest successfully!")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:26:41] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 150 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 412, in button_take
+    await interaction.response.send_message("Taking the quest successfully!")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:26:51] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 160 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 412, in button_take
+    await interaction.response.send_message("Taking the quest successfully!")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:26:57] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-26 16:26:57] [INFO    ] discord.client: logging in using static token
+[2022-07-26 16:26:58] [INFO    ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
+[2022-07-26 16:26:59] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 58b74387911baf7eb47d3506e73ba0cd).
+[2022-07-26 16:28:13] [ERROR   ] discord.ui.view: Ignoring exception in view <QuestBoardUI timeout=180.0 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Completed' emoji=None row=None>
+Traceback (most recent call last):
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 430, in button_completed
+    await interaction.response.send_message("Complete the quest!")
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/interactions.py", line 708, in send_message
+    await adapter.create_interaction_response(
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 432, in button_completed
+    await interaction.response.send_message("Failed to update the quest.")
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/interactions.py", line 708, in send_message
+    await adapter.create_interaction_response(
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+[2022-07-26 16:28:31] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 420, in button_completed
+    if owner!=interaction.user.name:
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 951, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:28:41] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 20 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 420, in button_completed
+    if owner!=interaction.user.name:
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 951, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:28:51] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 30 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 424, in button_completed
+    self.questboard.complete(Index)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 363, in complete
+    try:
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:29:01] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 40 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 424, in button_completed
+    self.questboard.complete(Index)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 365, in complete
+    return True
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1152, in trace_dispatch
+    self.do_wait_suspend(thread, back, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:29:11] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 50 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 426, in button_completed
+    if len(next)>0:
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:29:21] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 60 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 426, in button_completed
+    if len(next)>0:
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:29:31] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 70 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 426, in button_completed
+    if len(next)>0:
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:29:41] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 80 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 427, in button_completed
+    self.quest=next
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:29:51] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 90 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 428, in button_completed
+    embed = Quest.wrap_qeust(self.quest)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 452, in wrap_qeust
+    index=quest[0],
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:30:01] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 100 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 428, in button_completed
+    embed = Quest.wrap_qeust(self.quest)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 454, in wrap_qeust
+    status=_Status(int(quest[7])).name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:30:11] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 110 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 428, in button_completed
+    embed = Quest.wrap_qeust(self.quest)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 454, in wrap_qeust
+    status=_Status(int(quest[7])).name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:30:21] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 120 seconds.
+Loop thread traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/python/3.10.4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/workspaces/DiscordBot-heroku-python/main.py", line 129, in <module>
+    asyncio.run(main())
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/opt/python/3.10.4/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 429, in button_completed
+    await self.page.edit(embed=embed)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_trace_dispatch_regular.py", line 204, in trace_dispatch
+    return thread_trace_func(frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_trace_dispatch_regular.py", line 440, in __call__
+    ).trace_dispatch(frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 1123, in trace_dispatch
+    self.do_wait_suspend(thread, frame, event, arg)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 164, in do_wait_suspend
+    self._args[0].do_wait_suspend(*args, **kwargs)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2055, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "/home/codespace/.vscode-remote/extensions/ms-python.python-2022.10.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd.py", line 2091, in _do_wait_suspend
+    time.sleep(0.01)
+
+[2022-07-26 16:30:22] [INFO    ] discord.gateway: Timed out receiving packet. Attempting a reconnect.
+[2022-07-26 16:30:22] [INFO    ] discord.client: Got a request to RESUME the websocket.
+[2022-07-26 16:30:22] [INFO    ] discord.gateway: Shard ID None has sent the RESUME payload.
+[2022-07-26 16:30:25] [INFO    ] discord.gateway: Shard ID None session has been invalidated.
+[2022-07-26 16:30:25] [INFO    ] discord.client: Got a request to IDENTIFY the websocket.
+[2022-07-26 16:30:38] [ERROR   ] discord.ui.view: Ignoring exception in view <QuestBoardUI timeout=180.0 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Completed' emoji=None row=None>
+Traceback (most recent call last):
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 430, in button_completed
+    await interaction.response.send_message("Complete the quest!")
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/interactions.py", line 708, in send_message
+    await adapter.create_interaction_response(
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 432, in button_completed
+    await interaction.response.send_message("Failed to update the quest.")
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/interactions.py", line 708, in send_message
+    await adapter.create_interaction_response(
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+[2022-07-26 16:30:43] [INFO    ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
+[2022-07-26 16:30:43] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 4a7e1ee9cfd2c69fb1ae8e6795624f6d).
+[2022-07-26 16:31:51] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-26 16:31:51] [INFO    ] discord.client: logging in using static token
+[2022-07-26 16:31:51] [INFO    ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
+[2022-07-26 16:31:52] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 55ab716b11dee4d51d8e50cde26dc9ac).
+[2022-07-26 16:32:16] [ERROR   ] discord.ui.view: Ignoring exception in view <QuestBoardUI timeout=180.0 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Completed' emoji=None row=None>
+Traceback (most recent call last):
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 429, in button_completed
+    await interaction.response.send_message("Complete the quest!")
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/interactions.py", line 708, in send_message
+    await adapter.create_interaction_response(
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 423, in _scheduled_task
+    await item.callback(interaction)
+  File "/workspaces/DiscordBot-heroku-python/extensions/quest.py", line 431, in button_completed
+    await interaction.response.send_message("Failed to update the quest.")
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/interactions.py", line 708, in send_message
+    await adapter.create_interaction_response(
+  File "/opt/python/3.10.4/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction

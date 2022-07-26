@@ -7,6 +7,7 @@
 1. update discord.py to version 2.0.0
 2. update main to async/await style
 3. finished quest ui
+4. fix .gitignore (uncommend *.log)
 
 [2022-07-22]
 1. update quest funcions
