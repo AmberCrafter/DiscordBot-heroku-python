@@ -71,5 +71,5 @@ class Bot_system(Ext_Cog):
         """
         await ctx.send(f'{message}')
 
-def setup(bot):
-    bot.add_cog(Bot_system(bot))
+async def setup(bot):
+    await bot.add_cog(Bot_system(bot))

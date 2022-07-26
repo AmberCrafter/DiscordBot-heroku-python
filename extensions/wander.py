@@ -17,5 +17,5 @@ class Wander(Ext_Cog):
             await msg.channel.send(f"***{msg.author.name}*** don't move! You are under arrest!")
             await msg.channel.send(f"!!!!文字獄!!!!")
 
-def setup(bot):
-    bot.add_cog(Wander(bot))
+async def setup(bot):
+    await bot.add_cog(Wander(bot))

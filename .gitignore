@@ -1,5 +1,5 @@
 # Development mode
-# *_dev/
+*_dev/
 *.ignore
 
 # Byte-compiled / optimized / DLL files

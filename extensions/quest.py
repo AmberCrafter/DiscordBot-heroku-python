@@ -150,6 +150,20 @@ class _Database:
     def get_all(self) -> list:
         '''
         get all quests from database
+        
+        @return 
+        [
+            id,
+            starttime,
+            endtime,
+            announcer,
+            title,
+            detail_id,
+            reward,
+            status_id,
+            undertaker,
+            detail
+        ]
         '''
         query = 'select * from quest where status_id between 2 and 3;'
         query_detail = 'select context from detail where id={index};'
@@ -173,8 +187,59 @@ class _Database:
     def get(self, index: int) -> list:
         '''
         get quests from database by id
+        
+        @return 
+        [
+            id,
+            starttime,
+            endtime,
+            announcer,
+            title,
+            detail_id,
+            reward,
+            status_id,
+            undertaker,
+            detail
+        ]
         '''
         query = f'select * from quest where id=={index};'
+        query_detail = 'select context from detail where id={detail_id};'
+
+        try:
+            self.exe(query)
+            # return list(self.fa())
+            res = []
+            for quest in list(self.fa()):
+                self.exe(query_detail.format(
+                    detail_id = quest[5]
+                ))
+                context = self.fa()[0][0]
+                res.append(list(quest)+[context])
+            return res
+
+        except Exception as err:
+            print(err)
+            return []
+
+    def get_first(self) -> list:
+        '''
+        get first PUBLISHED quests from database
+        
+        @return 
+        [
+            id,
+            starttime,
+            endtime,
+            announcer,
+            title,
+            detail_id,
+            reward,
+            status_id,
+            undertaker,
+            detail
+        ]
+        '''
+        query = f'select * from quest where status_id between 2 and 3 limit 1;'
         query_detail = 'select context from detail where id={detail_id};'
 
         try:
@@ -305,7 +370,93 @@ class _Quest:
 from extensions.classer import Ext_Cog
 import discord
 from discord.ext import commands
+
+class QuestBoardUI(discord.ui.View):
+    def __init__(self, page, quest, questboard):
+        super().__init__()
+        self.page = page
+        self.quest = quest
+        self.questboard = questboard
+        self.database = questboard.database
+
+    @discord.ui.button(label="Prev", style=discord.ButtonStyle.green)
+    async def button_prev(self, interaction: discord.Interaction, button: discord.Button):
+        await interaction.response.defer()
+        if self.quest[0]-1>0:
+            index = self.quest[0]-1
+            self.quest = self.database.get(index)[0]
+            embed = Quest.wrap_qeust(self.quest)
+            await self.page.edit(embed=embed)
+    
+    @discord.ui.button(label="Next", style=discord.ButtonStyle.green)
+    async def button_next(self, interaction: discord.Interaction, button: discord.Button):
+        await interaction.response.defer()
+        index = self.quest[0]+1
+        next = self.database.get(index)[0]
+        if len(next)>0: 
+            self.quest=next
+            embed = Quest.wrap_qeust(self.quest)
+            await self.page.edit(embed=embed)
+
+    @discord.ui.button(label="Take", style=discord.ButtonStyle.red)
+    async def button_take(self, interaction: discord.Interaction, button: discord.Button):
+        index = self.quest[0]
+        try:
+            self.questboard.book(index, interaction.user.name)
+            next = self.database.get(index)[0]
+            if len(next)>0: 
+                self.quest=next
+                embed = Quest.wrap_qeust(self.quest)
+                await self.page.edit(embed=embed)
+            await interaction.response.send_message("Taking the quest successfully!")
+        except:
+            await interaction.response.send_message("Failed to take the quest.")
+
+    @discord.ui.button(label="Completed", style=discord.ButtonStyle.primary)
+    async def button_completed(self, interaction: discord.Interaction, button: discord.Button):
+        index = self.quest[0]
+        owner = self.quest[3]
+        if owner!=interaction.user.name:
+            await interaction.response.send_message("Invalid operator. You aren't this quest owner!")
+        else:
+            try:
+                self.questboard.complete(index)
+                next = self.database.get(index)[0]
+                if len(next)>0: 
+                    self.quest=next
+                    embed = Quest.wrap_qeust(self.quest)
+                    await self.page.edit(embed=embed)
+                await interaction.response.send_message("Complete the quest!")
+            except:
+                await interaction.response.send_message("Failed to update the quest.")
+
 class Quest(Ext_Cog):
+    @staticmethod
+    def wrap_qeust(quest: list) -> discord.Embed:
+        return discord.Embed(
+            title = "{title}".format(title=quest[4]),
+            description="""
+                ----------------
+                Id: {index}
+                Announcer: {announcer}
+                Status: {status}
+                Reward: {reward}
+                ----------------
+                Discription:
+                {discription}
+
+                ----------------
+                Taker: {taker}
+            """.format(
+                index=quest[0],
+                announcer=quest[3],
+                status=_Status(int(quest[7])).name,
+                reward=quest[6],
+                discription=quest[9],
+                taker=quest[8]
+            )
+        )
+
     @commands.group()
     async def quest(self, ctx):
         '''
@@ -370,8 +521,21 @@ class Quest(Ext_Cog):
         else:
             await ctx.send("Permission deny. You're not the quest owner!")
 
-def setup(bot):
-    bot.add_cog(Quest(bot))
+    @quest.command()
+    async def ui(self, ctx: commands.Context):
+        """Show the quest ui"""
+
+        quest = self.QuestBoard.database.get_first()[0]
+        embed = self.wrap_qeust(quest)
+
+        await ctx.send("**Quest Board**")
+        msg = await ctx.send(embed=embed)
+        view = QuestBoardUI(msg, quest, self.QuestBoard)
+        await ctx.send(view=view)
+        await view.wait()
+
+async def setup(bot):
+    await bot.add_cog(Quest(bot))
 
 
 
