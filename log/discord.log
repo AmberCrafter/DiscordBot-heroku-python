@@ -2027,3 +2027,7 @@ Loop thread traceback (most recent call last):
 [2022-07-26 16:51:49] [INFO    ] discord.client: Got a request to RESUME the websocket.
 [2022-07-26 16:51:49] [INFO    ] discord.gateway: Shard ID None has sent the RESUME payload.
 [2022-07-26 16:51:50] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session f38c4f26d4197e32f417b212bf7d9e39.
+[2022-07-26 16:56:23] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-26 16:56:23] [INFO    ] discord.client: logging in using static token
+[2022-07-26 16:56:24] [INFO    ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
+[2022-07-26 16:56:24] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: eac44a888bd228dfe47dbbbdf3b956f2).

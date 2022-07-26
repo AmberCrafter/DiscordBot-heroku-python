@@ -462,7 +462,9 @@ class Quest(Ext_Cog):
         '''
         Quest commands.
         '''
+        print("init")
         self.QuestBoard = _Quest()
+        print("init2")
         pass
 
     @quest.command()
