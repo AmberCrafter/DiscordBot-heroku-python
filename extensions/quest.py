@@ -177,16 +177,16 @@ class Quest(Ext_Cog):
         return discord.Embed(
             title = "{title}".format(title=quest[4]),
             description="""
-                ----------------
-                Id: {index}
-                Announcer: {announcer}
-                Status: {status}
-                Reward: {reward}
-                ----------------
+                ---------------------------------
+                |Id: {index}                    |
+                |Announcer: {announcer}         |
+                |Status: {status}               |
+                |Reward: {reward}               |
+                ---------------------------------
                 Discription:
                 {discription}
 
-                ----------------
+                ---------------------------------
                 Taker: {taker}
             """.format(
                 index=quest[0],
