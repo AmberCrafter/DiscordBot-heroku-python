@@ -51,6 +51,7 @@ structure:
     - detail
 
 1. status
+
 This is a status table, record status enum. Including header
 [
     id,
@@ -66,6 +67,7 @@ and value
   - 6: TIMEOUT
  
 2. quest
+
 This is a quest history table, which record all of the quests information. The header including
 [
     id,
@@ -80,6 +82,7 @@ This is a quest history table, which record all of the quests information. The h
 ]
 
 3. detail
+
 This is a table, record the quest detail information or context. Including header
 [
     id,

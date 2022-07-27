@@ -97,9 +97,9 @@ class QuestBoardUI(discord.ui.View):
     async def button_next(self, interaction: discord.Interaction, button: discord.Button):
         await interaction.response.defer()
         index = self.quest[0]+1
-        next = self.database.get(index)[0]
+        next_quest = self.database.get(index)[0]
         if len(next)>0: 
-            self.quest=next
+            self.quest=next_quest
             embed = Quest.wrap_qeust(self.quest)
             await self.page.edit(embed=embed)
 
@@ -108,9 +108,9 @@ class QuestBoardUI(discord.ui.View):
         index = self.quest[0]
         try:
             self.questboard.book(index, interaction.user.name)
-            next = self.database.get(index)[0]
+            next_quest = self.database.get(index)[0]
             if len(next)>0: 
-                self.quest=next
+                self.quest=next_quest
                 embed = Quest.wrap_qeust(self.quest)
                 await self.page.edit(embed=embed)
             await interaction.response.send_message("Taking the quest successfully!")
@@ -126,9 +126,9 @@ class QuestBoardUI(discord.ui.View):
         else:
             try:
                 self.questboard.complete(index)
-                next = self.database.get(index)[0]
+                next_quest = self.database.get(index)[0]
                 if len(next)>0: 
-                    self.quest=next
+                    self.quest=next_quest
                     embed = Quest.wrap_qeust(self.quest)
                     await self.page.edit(embed=embed)
                 await interaction.response.send_message("Complete the quest!")
