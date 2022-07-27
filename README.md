@@ -58,10 +58,15 @@ This is a status table, record status enum. Including header
 ]
 and value
   1 => UNPUBLISH
+
   2 => PUBLISH
+
   3 => UNDERTAKE
+
   4 => FINISHED
+
   5 => FAILED
+  
   6 => TIMEOUT
  
 2. quest
