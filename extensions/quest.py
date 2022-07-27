@@ -71,6 +71,17 @@ class _Quest:
             print(err)
             return False
 
+    def failed(self,quest_id) -> bool:
+        '''
+        update the quest status to FAILED by id
+        '''
+        try:
+            self.database.update_status(quest_id, QuestStatus.FAILED)
+            return True
+        except Exception as err:
+            print(err)
+            return False
+
 
 from extensions.classer import Ext_Cog
 import discord
@@ -84,7 +95,7 @@ class QuestBoardUI(discord.ui.View):
         self.questboard = questboard
         self.database = questboard.database
 
-    @discord.ui.button(label="Prev", style=discord.ButtonStyle.green)
+    @discord.ui.button(label="Prev", style=discord.ButtonStyle.gray)
     async def button_prev(self, interaction: discord.Interaction, button: discord.Button):
         await interaction.response.defer()
         if self.quest[0]-1>0:
@@ -93,7 +104,7 @@ class QuestBoardUI(discord.ui.View):
             embed = Quest.wrap_qeust(self.quest)
             await self.page.edit(embed=embed)
     
-    @discord.ui.button(label="Next", style=discord.ButtonStyle.green)
+    @discord.ui.button(label="Next", style=discord.ButtonStyle.gray)
     async def button_next(self, interaction: discord.Interaction, button: discord.Button):
         await interaction.response.defer()
         index = self.quest[0]+1
@@ -103,9 +114,11 @@ class QuestBoardUI(discord.ui.View):
             embed = Quest.wrap_qeust(self.quest)
             await self.page.edit(embed=embed)
 
-    @discord.ui.button(label="Take", style=discord.ButtonStyle.red)
+    @discord.ui.button(label="Take", style=discord.ButtonStyle.blurple)
     async def button_take(self, interaction: discord.Interaction, button: discord.Button):
         index = self.quest[0]
+        if not int(self.quest[7]) in [2, 5]: button.disabled = True
+
         try:
             self.questboard.book(index, interaction.user.name)
             next_quest = self.database.get(index)[0]
@@ -117,7 +130,7 @@ class QuestBoardUI(discord.ui.View):
         except:
             await interaction.response.send_message("Failed to take the quest.")
 
-    @discord.ui.button(label="Completed", style=discord.ButtonStyle.primary)
+    @discord.ui.button(label="Completed", style=discord.ButtonStyle.green)
     async def button_completed(self, interaction: discord.Interaction, button: discord.Button):
         index = self.quest[0]
         owner = self.quest[3]
@@ -134,6 +147,26 @@ class QuestBoardUI(discord.ui.View):
                 await interaction.response.send_message("Complete the quest!")
             except:
                 await interaction.response.send_message("Failed to update the quest.")
+
+    @discord.ui.button(label="Failed", style=discord.ButtonStyle.red)
+    async def button_failed(self, interaction: discord.Interaction, button: discord.Button):
+        index = self.quest[0]
+        owner = self.quest[3]
+        if not int(self.quest[7]) in [2,3,6]: button.disabled = True
+        if owner!=interaction.user.name:
+            await interaction.response.send_message("Invalid operator. You aren't this quest owner!")
+        else:
+            try:
+                self.questboard.failed(index)
+                next_quest = self.database.get(index)[0]
+                if len(next_quest)>0: 
+                    self.quest=next_quest
+                    embed = Quest.wrap_qeust(self.quest)
+                    await self.page.edit(embed=embed)
+                await interaction.response.send_message("Failed the quest!")
+            except:
+                await interaction.response.send_message("Failed to update the quest.")
+
 
 class Quest(Ext_Cog):
     @staticmethod
