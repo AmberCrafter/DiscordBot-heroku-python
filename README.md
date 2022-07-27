@@ -2,6 +2,10 @@
 
 ---
 ## Functional: Quest 
+
+#### Known Bug
+1. Heroku not support sqlite3, need to change into posgresql
+
 #### ChangeLog
 [2022-07-27]
 1. update discord.py to version 2.0.0

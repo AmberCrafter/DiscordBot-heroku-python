@@ -5,6 +5,7 @@ chardet==4.0.0
 discord.py @ git+https://github.com/Rapptz/discord.py.git@fb8d5c15d0ccdde369e4262fa5f9aad95e7989f2
 idna==3.3
 multidict==6.0.2
+psycopg2==2.9.3
 python-dotenv==0.20.0
 typing_extensions==4.3.0
 yarl==1.7.2

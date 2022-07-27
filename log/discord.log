@@ -2031,3 +2031,33 @@ Loop thread traceback (most recent call last):
 [2022-07-26 16:56:23] [INFO    ] discord.client: logging in using static token
 [2022-07-26 16:56:24] [INFO    ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
 [2022-07-26 16:56:24] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: eac44a888bd228dfe47dbbbdf3b956f2).
+[2022-07-27 01:22:56] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-27 01:22:56] [INFO    ] discord.client: logging in using static token
+[2022-07-27 01:23:13] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-27 01:23:13] [INFO    ] discord.client: logging in using static token
+[2022-07-27 01:24:17] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-27 01:24:17] [INFO    ] discord.client: logging in using static token
+[2022-07-27 01:24:38] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-27 01:24:38] [INFO    ] discord.client: logging in using static token
+[2022-07-27 01:25:17] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-27 01:25:17] [INFO    ] discord.client: logging in using static token
+[2022-07-27 01:27:04] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-27 01:27:04] [INFO    ] discord.client: logging in using static token
+[2022-07-27 01:28:54] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-27 01:28:54] [INFO    ] discord.client: logging in using static token
+[2022-07-27 01:29:04] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-27 01:29:04] [INFO    ] discord.client: logging in using static token
+[2022-07-27 01:29:51] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-27 01:29:51] [INFO    ] discord.client: logging in using static token
+[2022-07-27 01:29:51] [INFO    ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
+[2022-07-27 01:29:52] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 3453495c20bc2b34c050b5071e5fe7cd).
+[2022-07-27 01:30:29] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-27 01:30:29] [INFO    ] discord.client: logging in using static token
+[2022-07-27 01:30:30] [INFO    ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
+[2022-07-27 01:30:30] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: af0d9b5feb6d9bc89d96c9e707133c9f).
+[2022-07-27 01:30:40] [WARNING ] discord.client: PyNaCl is not installed, voice will NOT be supported
+[2022-07-27 01:30:40] [INFO    ] discord.client: logging in using static token
+[2022-07-27 01:30:41] [INFO    ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
+[2022-07-27 01:30:41] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: e7d54bfdfd12800c4db21f428a2bf870).
+[2022-07-27 01:31:44] [ERROR   ] discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "list" is not found
