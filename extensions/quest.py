@@ -98,7 +98,7 @@ class QuestBoardUI(discord.ui.View):
         await interaction.response.defer()
         index = self.quest[0]+1
         next_quest = self.database.get(index)[0]
-        if len(next)>0: 
+        if len(next_quest)>0: 
             self.quest=next_quest
             embed = Quest.wrap_qeust(self.quest)
             await self.page.edit(embed=embed)
@@ -109,7 +109,7 @@ class QuestBoardUI(discord.ui.View):
         try:
             self.questboard.book(index, interaction.user.name)
             next_quest = self.database.get(index)[0]
-            if len(next)>0: 
+            if len(next_quest)>0: 
                 self.quest=next_quest
                 embed = Quest.wrap_qeust(self.quest)
                 await self.page.edit(embed=embed)
@@ -127,7 +127,7 @@ class QuestBoardUI(discord.ui.View):
             try:
                 self.questboard.complete(index)
                 next_quest = self.database.get(index)[0]
-                if len(next)>0: 
+                if len(next_quest)>0: 
                     self.quest=next_quest
                     embed = Quest.wrap_qeust(self.quest)
                     await self.page.edit(embed=embed)
