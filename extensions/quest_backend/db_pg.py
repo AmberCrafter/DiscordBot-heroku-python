@@ -69,7 +69,7 @@ class Database:
             return False
 
         try:
-            query = 'Insert into status (status) values ("{value}");'
+            query = "Insert into status (status) values ('{value}');"
             for v in status:
                 self.exe(query.format(value=v))
             self.db.commit()
@@ -98,7 +98,7 @@ class Database:
 
         if process failed, return -1
         '''
-        query = 'Insert into detail (context) values ("{context}");'
+        query = "Insert into detail (context) values ('{context}');"
         
         try:
             self.exe(query.format(
@@ -122,7 +122,7 @@ class Database:
         if detail_id==-1:
             return False
 
-        query = f'Insert into quest (starttime, endtime, announcer, title, detail_id, reward, status_id) values ("{starttime.strftime(formation)}", "{endtime.strftime(formation)}", "{announcer}", "{title}", {detail_id}, {reward}, 2);'
+        query = f"Insert into quest (starttime, endtime, announcer, title, detail_id, reward, status_id) values ('{starttime.strftime(formation)}', '{endtime.strftime(formation)}', '{announcer}', '{title}', {detail_id}, {reward}, 2);"
 
         try:
             self.exe(query)
@@ -277,7 +277,7 @@ class Database:
         update quest undertaker by id
         '''
 
-        query = f'update quest set undertaker="{taker}" where id={index};'
+        query = f"update quest set undertaker='{taker}' where id={index};"
 
         try:
             self.exe(query)
