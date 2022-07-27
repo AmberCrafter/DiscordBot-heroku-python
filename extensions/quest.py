@@ -117,8 +117,9 @@ class QuestBoardUI(discord.ui.View):
     @discord.ui.button(label="Take", style=discord.ButtonStyle.blurple)
     async def button_take(self, interaction: discord.Interaction, button: discord.Button):
         index = self.quest[0]
-        if not int(self.quest[7]) in [2, 5]: button.disabled = True
-
+        if not int(self.quest[7]) in [2, 5]: 
+            await interaction.response.send_message("Invalid operator.")
+            return
         try:
             self.questboard.book(index, interaction.user.name)
             next_quest = self.database.get(index)[0]
@@ -152,7 +153,9 @@ class QuestBoardUI(discord.ui.View):
     async def button_failed(self, interaction: discord.Interaction, button: discord.Button):
         index = self.quest[0]
         owner = self.quest[3]
-        if not int(self.quest[7]) in [2,3,6]: button.disabled = True
+        if not int(self.quest[7]) in [2,3,6]: 
+            await interaction.response.send_message("Invalid operator.")
+            return
         if owner!=interaction.user.name:
             await interaction.response.send_message("Invalid operator. You aren't this quest owner!")
         else:
