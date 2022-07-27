@@ -12,6 +12,7 @@
 2. update main to async/await style
 3. finished quest ui
 4. fix .gitignore (uncommend *.log)
+5. fix heroku database: sqlite3 -> postgresql
 
 [2022-07-22]
 1. update quest funcions
