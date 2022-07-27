@@ -16,9 +16,7 @@ class Database:
 
     def __init__(self):
         database_path = os.getenv("DATABASE_URL")
-        print(database_path)
         self.db = psycopg2.connect(database_path, sslmode='require')
-        print("db connected")
         self.cur = self.db.cursor()
         self.exe = self.cur.execute
         self.fa = self.cur.fetchall
@@ -189,7 +187,7 @@ class Database:
             9: detail
         ]
         '''
-        query = f'select * from quest where id=={index};'
+        query = f'select * from quest where id={index};'
         query_detail = 'select context from detail where id={detail_id};'
 
         try:
